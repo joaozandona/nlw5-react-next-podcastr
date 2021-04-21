@@ -4,6 +4,8 @@ import { useRouter } from 'next/router'
 import { format, parseISO } from 'date-fns'
 import { api } from '../../services/api'
 import { convertDurationToTimeString } from '../../utils/convertDurationToTimeString'
+import styles from './episode.module.scss';
+import Image from 'next/image';
 
 
 type Episode = {
@@ -24,7 +26,26 @@ type EpisodeProps = {
 
 export default function Episode({ episode }: EpisodeProps) {
   return (
-    <h1>{episode.members}</h1>
+    <div className={styles.episode}>
+      <div className={styles.thumbnailCONtainer}>
+        <button type="button">
+          <img src="/arrow-left.svg" alt="Voltar" />
+        </button>
+        <Image width={700} height={160} src={episode.thumbnail} objectFit="cover" />
+        <button type="button">
+          <img src="/play.svg" alt="Tocar episódio" />
+        </button>
+      </div>
+      <header>
+        <h1>{episode.title}</h1>
+        <span>{episode.members}</span>
+        <span>{episode.publishedAt}</span>
+        <span>{episode.durationAsString}</span>
+      </header>
+
+      <div className={styles.description} dangerouslySetInnerHTML={{__html: episode.description}} />
+
+    </div>
   )
 }
 
