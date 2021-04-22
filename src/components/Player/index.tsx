@@ -9,13 +9,7 @@ export function Player(){
 
   const audioRef = useRef<HTMLAudioElement>(null);
 
-  const {
-         episodeList,
-         currentEpisodeIndex,
-         isPlaying,
-         togglePlay,
-         setPlayingState
-        } = useContext(PlayerContext);
+  const {episodeList, currentEpisodeIndex, isPlaying, togglePlay, setPlayingState} = useContext(PlayerContext);
 
   useEffect(() => {
     if (!audioRef.current){
