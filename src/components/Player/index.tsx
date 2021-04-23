@@ -11,7 +11,22 @@ export function Player(){
   const audioRef = useRef<HTMLAudioElement>(null);
   const [progress, setProgress] = useState(0);
 
-  const {episodeList, currentEpisodeIndex, isPlaying, clearPlayerState, togglePlay, setPlayingState, playNext, playPrevious, hasNext, hasPrevious, isLooping, toggleLoop, toggleShuffle, isShuffling} = usePlayer();
+  const {
+    episodeList, 
+    currentEpisodeIndex, 
+    isPlaying, 
+    clearPlayerState, 
+    togglePlay, 
+    setPlayingState, 
+    playNext, 
+    playPrevious, 
+    hasNext, 
+    hasPrevious, 
+    isLooping, 
+    toggleLoop, 
+    toggleShuffle, 
+    isShuffling
+  } = usePlayer();
 
   useEffect(() => {
     if (!audioRef.current){
@@ -73,7 +88,13 @@ export function Player(){
         <span>{convertDurationToTimeString(progress)}</span>
           <div className={styles.slider}>
             {episode ? (
-              <Slider trackStyle={ {backgroundColor: '#04d361'} } onChange={handleSeek} railStyle = {{backgroundColor: '#9f75ff'}} handleStyle = {{borderColor: '#04d361', borderWidth: 4}} max={episode.duration} value={progress} />
+              <Slider trackStyle={
+                 {backgroundColor: '#04d361'} } 
+                 onChange={handleSeek} 
+                 railStyle = {{backgroundColor: '#9f75ff'}} 
+                 handleStyle = {{borderColor: '#04d361', borderWidth: 4}} 
+                 max={episode.duration} 
+                 value={progress} />
             ) : (
               <div className={styles.emptySlider} />
             ) }
@@ -81,7 +102,16 @@ export function Player(){
           <span>{convertDurationToTimeString(episode?.duration ?? 0)}</span>
         </div>
         {episode && (
-          <audio src={episode.url} ref={audioRef} onEnded={handleEpisodeEnded}loop={isLooping} autoPlay onPlay={() => setPlayingState(true)} onPause={() => setPlayingState(false) } onLoadedMetadata={setupProgressListener}/>
+          <audio 
+          src={episode.url} 
+          ref={audioRef} 
+          onEnded={handleEpisodeEnded} 
+          loop={isLooping} 
+          autoPlay 
+          onPlay={() => setPlayingState(true)} 
+          onPause={() => setPlayingState(false) } 
+          onLoadedMetadata={setupProgressListener}
+          />
         )}
         <div className={styles.buttons}>
           <button type="button" disabled={!episode || episodeList.length === 1 } onClick={toggleShuffle} className={isShuffling ? styles.isActive: ''}>
