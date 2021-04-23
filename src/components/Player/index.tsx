@@ -22,7 +22,7 @@ export function Player(){
       audioRef.current.pause();
     }
   }, [isPlaying])
-
+ 
   const episode = episodeList[currentEpisodeIndex]
 
   return(
