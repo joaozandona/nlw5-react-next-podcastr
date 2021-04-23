@@ -30,7 +30,12 @@ export function Player(){
 
     audioRef.current.addEventListener('timeupdate', () => {
       setProgress(Math.floor(audioRef.current.currentTime));
-    })
+    });
+  }
+
+  function handleSeek(amount: number) {
+    audioRef.current.currentTime = amount;
+    setProgress(amount);
   }
 
   const episode = episodeList[currentEpisodeIndex]
@@ -60,7 +65,7 @@ export function Player(){
         <span>{convertDurationToTimeString(progress)}</span>
           <div className={styles.slider}>
             {episode ? (
-              <Slider trackStyle={ {backgroundColor: '#04d361'} } railStyle = {{backgroundColor: '#9f75ff'}} handleStyle = {{borderColor: '#04d361', borderWidth: 4}} />
+              <Slider trackStyle={ {backgroundColor: '#04d361'} } onChange={handleSeek} railStyle = {{backgroundColor: '#9f75ff'}} handleStyle = {{borderColor: '#04d361', borderWidth: 4}} max={episode.duration} value={progress} />
             ) : (
               <div className={styles.emptySlider} />
             ) }
