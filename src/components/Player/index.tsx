@@ -11,7 +11,7 @@ export function Player(){
   const audioRef = useRef<HTMLAudioElement>(null);
   const [progress, setProgress] = useState(0);
 
-  const {episodeList, currentEpisodeIndex, isPlaying, togglePlay, setPlayingState, playNext, playPrevious, hasNext, hasPrevious, isLooping, toggleLoop, toggleShuffle, isShuffling} = usePlayer();
+  const {episodeList, currentEpisodeIndex, isPlaying, clearPlayerState, togglePlay, setPlayingState, playNext, playPrevious, hasNext, hasPrevious, isLooping, toggleLoop, toggleShuffle, isShuffling} = usePlayer();
 
   useEffect(() => {
     if (!audioRef.current){
@@ -36,6 +36,14 @@ export function Player(){
   function handleSeek(amount: number) {
     audioRef.current.currentTime = amount;
     setProgress(amount);
+  }
+
+  function handleEpisodeEnded() {
+    if(hasNext) {
+      playNext();
+    } else {
+      clearPlayerState();
+    }
   }
 
   const episode = episodeList[currentEpisodeIndex]
@@ -73,7 +81,7 @@ export function Player(){
           <span>{convertDurationToTimeString(episode?.duration ?? 0)}</span>
         </div>
         {episode && (
-          <audio src={episode.url} ref={audioRef} loop={isLooping} autoPlay onPlay={() => setPlayingState(true)} onPause={() => setPlayingState(false) } onLoadedMetadata={setupProgressListener}/>
+          <audio src={episode.url} ref={audioRef} onEnded={handleEpisodeEnded}loop={isLooping} autoPlay onPlay={() => setPlayingState(true)} onPause={() => setPlayingState(false) } onLoadedMetadata={setupProgressListener}/>
         )}
         <div className={styles.buttons}>
           <button type="button" disabled={!episode || episodeList.length === 1 } onClick={toggleShuffle} className={isShuffling ? styles.isActive: ''}>
