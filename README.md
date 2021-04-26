@@ -84,7 +84,7 @@ In case you don't have an SSH key on your GitHub account, you can clone the proj
 
 ### Web
 
-1. Open the **web** folder an run ```yarn``` to install the dependencies;
+1. Open the folder an run ```yarn``` to install the dependencies;
 2. This app use a fake api. In the project folder, run ```yarn server```;
 3. Run ```yarn dev``` to open the web application on port 3000.
 
