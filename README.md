@@ -19,7 +19,7 @@
 </p>
 
 <p align="center">
-	<b>Podcast system!</b><br />
+	<br /><b>Podcast system!</b><br />
   A project developed during NLW5.
   <br />
 	<span>Frontend of a podcast playback system.</span><br />
@@ -35,7 +35,7 @@
 	<img alt="Create" src="./.github/tela_inicial_rodando_podcast.png" />
   <b>Podcast screen</b><br />
 	<img alt="Update" src="./.github/tela_podcast.png" />
-  <b>Empty player&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Player tocando</b><br />
+  <b>Empty player&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Player tocando</b><br />
 	<img alt="Home" src="./.github/player_vazio.png" width="250px" />
   <img alt="Plates" src="./.github/player_rodando.png" width="250px" />
 	<b>Podcast screen</b><br />
