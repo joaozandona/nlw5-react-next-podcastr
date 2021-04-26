@@ -37,7 +37,7 @@
 	<img alt="Update" src="./.github/tela_podcast.png" />
   <b>Empty player&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Player tocando</b><br />
 	<img alt="Home" src="./.github/player_vazio.png" width="250px" />
-  <img alt="Plates" src="./.github/player_rodando.png" width="250px" />
+  <img alt="Plates" src="./.github/player_rodando.png" width="250px" /><br />
 	<b>Podcast screen</b><br />
   <img alt="Search" src="./.github/botoes_player.png" width="250px" />
 </p>
