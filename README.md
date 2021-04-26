@@ -80,8 +80,6 @@ In case you don't have an SSH key on your GitHub account, you can clone the proj
 
 ```git clone https://github.com/joaozandona/nlw5-react-next-podcastr.git```
 
-**Both of this commands will generates a folder called GoRestaurant, with all the project**
-
 # :bulb: Getting started
 
 ### Web
