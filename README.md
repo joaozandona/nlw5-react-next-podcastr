@@ -1,34 +1,93 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<br />
 
-## Getting Started
+<p align="center">
+  <img alt="Logo" src="./public/logo.svg" width="130px" />
+</p>
 
-First, run the development server:
+<h1 align="center" style="text-align: center;">Podcastr</h1>
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+<p align="center">
+	<a href="https://github.com/joaozandona">
+		<img alt="Author" src="https://img.shields.io/badge/Autor-Jo%C3%A3o%20Zandon%C3%A1-brightgreen" />
+	</a>
+	<a href="#">
+		<img alt="Languages" src="https://img.shields.io/badge/Languages-3-brightgreen" />
+	</a>
+	<a href="#">
+		<img alt="Stars" src="https://img.shields.io/badge/State-Finished-brightgreen" />
+	</a>
+</p>
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+<p align="center">
+	<b>Podcast system!</b><br />
+  A project developed during NLW5.
+  <br />
+	<span>Frontend of a podcast playback system.</span><br />
+	<sub>To the moon! 🚀</sub>
+</p>
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+<br />
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+<p align="center">
+	<b>Home screen</b><br />
+  <img alt="Home screen" src="./.github/tela_inicial.png" />
+  <b>Home screen playing a podcast</b><br />
+	<img alt="Create" src="./.github/tela_inicial_rodando_podcast.png" />
+  <b>Podcast screen</b><br />
+	<img alt="Update" src="./.github/tela_podcast.png" />
+  <b>Empty player&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Player tocando</b><br />
+	<img alt="Home" src="./.github/player_vazio.png" width="250px" />
+  <img alt="Plates" src="./.github/player_rodando.png" width="250px" />
+	<b>Podcast screen</b><br />
+  <img alt="Search" src="./.github/botoes_player.png" width="250px" />
+</p>
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+<br />
 
-## Learn More
+# :pushpin: Contents
 
-To learn more about Next.js, take a look at the following resources:
+- [Features](#rocket-features)
+- [Installation](#wrench-installation)
+- [Getting started](#bulb-getting-started)
+# :rocket: Features
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Web
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+- List of episodes
+- Separates the last two episodes released
+- Each episode has its own page with more information about it
 
-## Deploy on Vercel
+### Player
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- All functions of the player / buttons work
+- Functional Slider
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+# :wrench: Installation
+
+### Required :warning:
+- Yarn
+- Node.js
+
+### SSH
+
+SSH URLs provide access to a Git repository via SSH, a secure protocol. If you have an SSH key registered in your GitHub account, clone the project using this command:
+
+```git clone git@github.com:joaozandona/nlw5-react-next-podcastr.git```
+
+### HTTPS
+
+In case you don't have an SSH key on your GitHub account, you can clone the project using the HTTPS URL, run this command:
+
+```git clone https://github.com/joaozandona/nlw5-react-next-podcastr.git```
+
+**Both of this commands will generates a folder called GoRestaurant, with all the project**
+
+# :bulb: Getting started
+
+### Web
+
+1. Open the **web** folder an run ```yarn``` to install the dependencies;
+2. This app use a fake api. In the project folder, run ```yarn server```;
+3. Run ```yarn dev``` to open the web application on port 3000.
+
+
